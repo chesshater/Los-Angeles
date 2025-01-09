@@ -3,14 +3,15 @@
     <title>Los Angeles</title>
     <style type="text/css">
    .header{background-color:RGBA(67,122,167,1.0);
-	   display:flex}
+	   display:flex;
+	   box-shadow:5px 5px black}
    .header div{WIDTH:50%;
 		float:left
 		}
    .main
 	{
 	background-image:url("universal-studios-hollywood-hero1.jpg");
-	padding:180;
+	padding:200;
 	background-size:cover;
 	background-attachment:fixed;
 	text-align:center;
@@ -24,6 +25,7 @@
 	{
 	background-color:RGB(167,180,214);
 	text-align:center;
+		box-shadow:5px 5px black;
 	}
    .footer
 	{
@@ -51,6 +53,11 @@
     #hoi2:hover{transform:scaleX(1.5) scaleY(2);}
     #hoi3{transition:transform 4s linear;}
     #hoi3:hover{transform:rotate(180deg);}
+    #hoi4{transition:transform 4s linear;}
+    #hoi4:hover{transform:skewX(180deg);}
+    #hoi5{transition:transform 4s linear;}
+    #hoi5:hover{transform:skewY(180deg);}
+
     nav{float:right}
     nav ul{list-style:none}
     nav li{display:inline-block;
@@ -101,11 +108,11 @@
 	</li>
 	<li>
 		<h4>	Hollywood Walk of Fame</h4>
-		<img src="jfif.jpg" width="50%">
+		<img id="hoi4" src="jfif.jpg" width="50%">
 	</li>	
 	<li>
 		<h4>	Los Angeles County Museum of Art</h4>
-		<img src="travel.avif" width="50%">
+		<img id="hoi5" src="travel.avif" width="50%">
 	</li>
 	
 	</div>
