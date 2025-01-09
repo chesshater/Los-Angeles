@@ -1,0 +1,115 @@
+<html>
+  <head>
+    <title>Los Angeles</title>
+    <style type="text/css">
+   .header{background-color:RGBA(67,122,167,1.0);
+	   display:flex}
+   .header div{WIDTH:50%;
+		float:left
+		}
+   .main
+	{
+	background-image:url("universal-studios-hollywood-hero1.jpg");
+	padding:180;
+	background-size:cover;
+	background-attachment:fixed;
+	text-align:center;
+	float:inherit;
+	opacity:0.5;
+	color:white;
+	font-size:20px;
+	}
+
+   .content
+	{
+	background-color:RGB(167,180,214);
+	text-align:center;
+	}
+   .footer
+	{
+	background-color:RGB(254,255,214);
+	text-align:right
+	}
+   .stand{
+	background-color:black;
+	opacity:0.7;
+	padding:30;
+	 }
+   .content ol
+	{background:RGB(105,129,195);
+	list-style:upper-roman;
+	padding:30px;
+	color:black;
+	}
+   .content ol li
+	{background:RGB(21,49,127);
+	color:white;
+	}
+    #hoi{transition:transform 4s;}
+    #hoi:hover{transform:rotate(180deg);}
+    #hoi2{transition:transform 4s;}
+    #hoi2:hover{transform:scaleX(1.5) scaleY(2);}
+    #hoi3{transition:transform 4s linear;}
+    #hoi3:hover{transform:rotate(180deg);}
+    nav{float:right}
+    nav ul{list-style:none}
+    nav li{display:inline-block;
+	   padding:20px;
+	   position:relative;}
+    nav a{text-decoration:none}
+    nav a:hover{color:#15177F}
+    nav a:before{content:'';
+		  display:block;
+		  position:absolute;
+		  top:0;
+		  height:5px;
+		  background-color:#15177F;
+		  width:0%;
+		  transition:width ease-in-out 0.25s;
+		 }
+    a:hover:before{width:50%}
+         </style>
+  </head>
+  <body>
+    <!--img src="https://www.thomascook.com/.imaging/mte/thomascook-theme/og-image/dam/legacy/compressed-jpg/universal-studios-hollywood-hero1.jpg/jcr:content/universal-studios-hollywood-hero1.jpg"-->
+<div class="header"><div><h1 style="text-shadow:2px 2px lightblue">My Travel Website</h1></div>
+	<div>
+		<nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</nav>
+	</div>
+</div>
+<div class="main" width="100%" height="25%"><h1 class="stand">Welcome to LOS ANGELES!!!<h1>
+</div>
+<div class="content"><H2 style="text-shadow:3px 3px lightblue">5 GREAT PLACES TO VISIT IN LOS ANGELES</h2>
+  <ol>
+	<li>
+	<h4>		Universal Studios</h4><br>
+	   <img id="hoi" src="images.jfif" width="50%"><br>	
+	</li>
+	<li>
+		<h4>	Griffith Observatory</h4><br>
+		<img id="hoi2" src="Griffith-1-1.jpg" width="50%">
+	</li>
+	<li>
+		<h4>	The Getty</h4><br>
+		<img id="hoi3" src="download.jfif" width="50%">
+	</li>
+	<li>
+		<h4>	Hollywood Walk of Fame</h4>
+		<img src="jfif.jpg" width="50%">
+	</li>	
+	<li>
+		<h4>	Los Angeles County Museum of Art</h4>
+		<img src="travel.avif" width="50%">
+	</li>
+	
+	</div>
+<div class="footer">Authored by:Adinay Shirguppi
+</div>
+</body>
+</html>
