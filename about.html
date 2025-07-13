@@ -1,10 +1,35 @@
 <html>
   <head>
     <title>Los Angeles</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(function(){
+	
+	$('.faq-item').click(function(){
+	var $answer = $(this).find('.ans');
+	if($answer.hasClass('open')) { 
+      $answer.removeClass('open');
+      // Use the slideUp() method to hide $answer
+      $answer.slideUp();
+      
+      // Find the <span> elements inside, then rewrite the content using the text() method
+      $(this).find('span').text('+');
+      
+      
+    } else {
+      $answer.addClass('open'); 
+      // Use the slideDown() method to show $answer
+      $answer.slideDown();
+      
+      // Find the <span> elements inside, then rewrite the content using the text() method
+      $(this).find('span').text('-');
+	}
+	});
+});
+</script>
     <style type="text/css">
    .header{background-color:RGBA(67,122,167,1.0);
-	   display:flex;
-	   box-shadow:5px 5px black}
+	   display:flex}
    .header div{WIDTH:50%;
 		float:left
 		}
@@ -17,17 +42,14 @@
 	text-align:center;
 	float:inherit;
 	opacity:0.5;
-	color:blue;
+	color:white;
 	font-size:20px;
 	}
 
    .content
 	{
 	background-color:RGB(167,180,214);
-	font-family:Comic Sans MS;
-	text-align:justify;
-	padding:20px;
-	font-size:2em
+	text-align:center;
 	}
    .footer
 	{
@@ -72,30 +94,91 @@
 		  transition:width ease-in-out 0.25s;
 		 }
     a:hover:before{width:50%}
+    .ans{display:none;}
+    .faq-item{list-style:none;
+		position:relative;
+		padding:10px}
+    .faq-item span{position:absolute;
+			top:0;right:550;
+			padding:10px;}
+    .open{display:inline-block;}
+    .faq{font-family:"Comic Sans MS","Comic Sans",Serif;
+	 color:white}
+
+/*----Styling of Banner or Image Slider begins--------------*/
+
+            #main-banner {
+                width:100%;
+                max-height:500px;
+                overflow: hidden;
+            }
+            #main-banner img{
+                width: 100%;
+            }
+            #slider{
+                overflow: hidden;
+            }
+            #slides{
+                position:relative;
+                width: 500%;
+                margin:0;
+                left:0;
+                text-align: left;
+                font-size:0;
+                animation: 18s slide-cycle infinite;
+                
+            }
+            #slides img{
+                width: 20%;
+                float: left;
+            }
+@keyframes slide-cycle{
+                0%{left:0%;}
+               28%{left:0%;}
+                33% {left:-100%;}
+               61%{left:-100%;}
+                66% {left:-200%;}
+               	95%{left:-200%;}
+                100% {left:0%;}
+            }
+
+
          </style>
   </head>
   <body>
     <div class="header"><div><h1 style="text-shadow:2px 2px lightblue">My Travel Website</h1></div>
-	    
 	<div>
 		<nav>
 			<ul>
-				<li><a href="index.html">Home</a></li>
+				<li><a href="travel.html">Home</a></li>
 				<li><a href="#">About</a></li>
-				<li><a href="contact.html">Contact</a></li>
+				<li><a href="#">Contact</a></li>
 			</ul>
 		</nav>
 	</div>
-       </div>
+</div>
+<div class="content"><H2 style="text-shadow:3px 3px lightblue">5 GREAT PLACES TO VISIT IN LOS ANGELES</h2>
+<!------------Banner or Image Slider HTML begins----------------------!>
+     <div id="main-banner">
+            <div id="slider">
+                <div id="slides">
+                    <img src="GoldenGateBridge-001.jpg" height="500">
+                    <img src="caption.jpg" height="500px">
+                    <img src="la.jpg" width="100%" height="75%">
+                </div>
+            </div>
+        </div>
+<!------------Banner or Image Slider HTML ends----------------------!>
 
-	  <div class="content"><p>Los Angeles, often referred to by its initials L.A., is the most populous city in the U.S. state of California. With an estimated 3,820,914 residents within the city limits as of 2023,[8] it is the second-most populous city in the United States, behind only New York City; it is also the commercial, financial and cultural center of Southern California. Los Angeles has an ethnically and culturally diverse population, and is the principal city of a metropolitan area of 12.8 million people (2023). Greater Los Angeles, which includes the Los Angeles and Riverside–San Bernardino metropolitan areas, is a sprawling metropolis of over 18.3 million residents.</p>
-
-<p>The majority of the city proper lies in a basin in Southern California adjacent to the Pacific Ocean in the west and extending partly through the Santa Monica Mountains and north into the San Fernando Valley, with the city bordering the San Gabriel Valley to its east. It covers about 469 square miles (1,210 km2),[6] and is the county seat of Los Angeles County, which is the most populous county in the United States with an estimated 9.86 million residents as of 2022.[17] It is the third-most visited city in the U.S. with over 2.7 million visitors as of 2023.[18]</p>
-
-<p>The area that became Los Angeles was originally inhabited by the indigenous Tongva people and later claimed by Juan Rodríguez Cabrillo for Spain in 1542. The city was founded on September 4, 1781, under Spanish governor Felipe de Neve, on the village of Yaanga.[19] It became a part of the First Mexican Empire in 1821 following the Mexican War of Independence. In 1848, at the end of the Mexican–American War, Los Angeles and the rest of California were purchased as part of the Treaty of Guadalupe Hidalgo and became part of the United States. Los Angeles was incorporated as a municipality on April 4, 1850, five months before California achieved statehood. The discovery of oil in the 1890s brought rapid growth to the city.[20] The city was further expanded with the completion of the Los Angeles Aqueduct in 1913, which delivers water from Eastern California.</p></div>
-
-
-	  
+<ul class="faq">
+<li class="faq-item"><div class="ques">Where did you travel in Los Angeles?</div><span>+</span>
+<div class="ans">I saw Universal Studios, which I loved. I also saw Disneyland, which I hated.</div></li>
+<li class="faq-item"><div class="ques">Where else did you travel in the US?</div><span>+</span>
+<div class="ans">I went in San Fransisco, Chicago and Las Vegas.</div></li>
+<li class="faq-item"><div class="ques">Which place did you like the most?</div><span>+</span>
+<div class="ans">I liked San Fransisco and Los Angeles the most.</div></li>
+</ul>
+</div>
 <div class="footer">Authored by:Adinay Shirguppi
 </div>
 </body>
